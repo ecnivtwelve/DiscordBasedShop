@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vincasfxgi – Connexion</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <script type="module">
+            const urlParams = new URLSearchParams(window.location.search);
+            const tokenCode = urlParams.get('code');
+            var code = tokenCode;
+
+            const params = new URLSearchParams();
+                params.append('client_id', '10022544975977256');
+                params.append('client_secret', '3zxlDHNAOIUAJHPsqsqPS7');
+                params.append('grant_type', 'authorization_code');
+                params.append('code', code);
+                params.append('redirect_uri', 'https://vincahsfxgi.web.app/auth.html');
+
+            // POST that to Discord
+            var site = await fetch("https://discord.com/api/v9/oauth2/token", {
+                method: 'POST',
+                body: params,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            });    
+
+            var response = await site.json();
+
+            fetch('https://discord.com/api/users/@me', {
+                headers: {
+                    authorization: `${response.token_type} ${response.access_token}`,
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                let userdata = {
+                    email: data.email,
+                    discriminator: data.discriminator,
+                    username: data.username,
+                    id: data.id,
+                    avatar: data.avatar,
+                    locale: data.locale,
+                    token : {
+                        token_type: response.token_type,
+                        access_token: response.access_token,
+                        refresh_token: response.refresh_token,
+                        expires_in: response.expires_in,
+                        scope: response.scope,
+                        created_at: response.created_at,
+                    },
+                    avatarURL : 'https://cdn.discordapp.com/avatars/' + data.id + '/' + data.avatar + '.png?size=1024',
+                };
+
+                console.log(userdata);
+                localStorage.setItem('userdata', JSON.stringify(userdata));
+                window.location.href = 'index.html';
+            });
+        </script>
+    </body>
+</html>

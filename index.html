@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vincasfxgi – Mon profil</title>
+        <meta name="theme-color" content="#23272a">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <meta property="og:title" content="Les meilleurs produits du serveur Kaya's Place !">
+        <meta property="og:site_name" content="Vincahsfxgi's Shop">
+        <meta property="og:url" content="https://vincahsfxgi.web.app/">
+        <meta property="og:description" content="Plus de 4 références et un moyen sympa de dépenser votre argent simplement, c'est bien sûr le Vincahsfxgi's Shop !">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://i.ibb.co/ydBVx4X/image.png">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <app>
+            <div class="profile">
+                <img id="user_avatar" alt="avatar">
+                <h2 id="user_name"><span></span></h2>
+                <p class="balance">Pièces : <span id="user_balance"></span><img src="coin.png" class="coin"></p>
+                <a class="link" href="getCoins.html">Obtenir des pièces</a>
+            </div>
+            <div id="library">
+                <h3>Mon inventaire</h3>
+            </div>
+            <small class="credits">(crée par vincent la star pour le serveur de Kya)</small>
+        </app>
+        <nav>
+            <a href="products.html" class="navElem">
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+                <p>Produits</p>
+            </a>
+            <a href="index.html" class="navElem sel">
+                <span class="material-icons">
+                    account_circle
+                </span>
+                <p>Mon profil</p>
+            </a>
+        </nav>
+
+        <script>
+            let currentPage = "profile";
+        </script>
+        <script type="module" async src="js/app.js"></script>
+    </body>
+</html>

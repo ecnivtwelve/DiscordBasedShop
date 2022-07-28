@@ -1,0 +1,341 @@
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+
+* {
+	font-family: 'Whitney', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #23272a;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 56px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #2c2f33ff;
+    backdrop-filter: saturate(180%) blur(30px);
+    -webkit-backdrop-filter: saturate(180%) blur(30px);
+    border-top: 1px solid #ffffff31;
+}
+
+nav * {
+    color: #ffffff99;
+}
+
+.navElem.sel * {
+    color: #fff !important;
+}
+
+.navElem {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navElem p {
+    font-size: 14px;
+}
+
+app {
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    background-color: transparent;
+    overflow-y: scroll;
+    padding-bottom: 156px;
+    /* opacity: 0; */
+    /* animation: app 0.15s 0.3s ease-out forwards; */
+}
+
+app h1 {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-transform: uppercase !important;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 50%;
+}
+
+.getCoins {
+    padding: 15px !important;
+    height: calc(100vh - 56px - 30px);
+    width: calc(100vw - 30px);
+}
+
+.tuto {
+    width: 50% !important;
+    border-radius: 10px;
+    border: 1px solid #ffffff11;
+}
+
+.getCoins h1 {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
+#amont {
+    width: calc(100% - 30px);
+    font-size: 18px;
+    background-color: #00000022;
+    border: 1px solid #ffffff11;
+    padding: 10px 15px;
+}
+
+#equiv {
+    margin-left: 15px !important;
+    margin-top: 5px;
+}
+
+#cmd {
+    width: calc(100% - 30px);
+    font-size: 14px;
+    background-color: #00000022;
+    border: 1px solid #ffffff11;
+    padding: 10px 15px;
+    font-family: monospace;
+}
+
+.link {
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.credits {
+    margin-left: 20px;
+    opacity: 0.2 !important;
+}
+
+@keyframes app {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.profile {
+    background-color: #2c2f33;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile h2 span {
+    font-weight: 400;
+    opacity: 50%;
+}
+
+.profile p {
+    opacity: 50%;
+}
+
+.product {
+    background-color: #2c2f33;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px #00000051;
+}
+
+.product:hover {
+    background-color: #31353a;
+    box-shadow: 0 2px 8px #00000051;
+}
+
+.product.full {
+    margin: 0;
+    border-radius: 0;
+    background: none;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product_info {
+    padding: 15px;
+    position: relative;
+}
+
+.product_info .desc {
+    opacity: 50%;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.balance .coin {
+    height: 16px;
+    width: 16px;
+    margin-left: 5px;
+    transform: translateY(3px);
+}
+
+.price .coin {
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.product_info .qt {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    text-align: right;
+    opacity: 50%;
+}
+
+.explain {
+    width: calc(100% - 30px) !important;
+}
+
+.buyProd {
+    margin: 15px;
+    width: calc(100% - 30px);
+    border: none;
+    padding: 8px;
+    background: #5865F2;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.buyProd.disabled {
+    background: #00000055;
+    color: #ffffff55;
+}
+
+#owners, #library {
+    background-color: #2c2f33;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.owner, .libraryItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.owner img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.owner div, .libraryItem div {
+    margin-left: 10px;
+}
+
+.owner div small {
+    opacity: 50%;
+}
+
+#owners h3, #library h3 {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 10px;
+}
+
+.libraryItem img {
+    height: 48px;
+    width: 48px;
+    border-radius: 5px;
+}
+
+#AllCoins {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    background-color: #00000099;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 100px;
+    padding: 10px 15px;
+    align-items: center;
+    display: none;
+}
+
+#AllCoins img {
+    height: 18px;
+    width: 18px;
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 700px){
+    #newProducts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 900px){
+    #newProducts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product.full .showroom {
+        height: 50vh !important;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    #newProducts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    app {
+        max-width: 1400px;
+        margin-left: calc(50% - 700px);
+    }
+}

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vincasfxgi – Mon profil</title>
+        <meta name="theme-color" content="#23272a">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="AllCoins">
+            <p id="AllCoinsText"></p>
+            <img src="coin.png" class="coin">
+        </div>
+        <app class="getCoins">
+            <h2>Comment obtenir des pièces</h2>
+            <p class="explain">
+                Sur le serveur de Kya, il existe un système de monnaie, la KP Money. Ici, nous avons notre propre monnaie, les pièces Vincahsfxgi qu'on peut obtenir via la commande générée sur cette page.
+            </p>
+
+            <br>
+            <h1>Combien voulez-vous ?</h1>
+            <input type="tel" id="amont" placeholder="Montant à créditer en pièces Vincahsfxgi">
+            <p id="equiv"> = <span id="equiv1">0</span> pièces Kaya's Place</p>
+
+            <br>
+            <h1>Copiez- collez cette commande dans n'importe quel salon</h1>
+            <input type="text" readonly id="cmd" placeholder=".give 0 <@913134436198019092> #vincahsfxgi">
+            <p id="equiv">ou envoyez directement <span id="equiv2">0</span> pièces à vincent</p>
+
+            <br>
+            <h1>Vidéo explicative</h1>
+            <video class="tuto" controls src="https://cdn.discordapp.com/attachments/1001198944220627025/1002272611172090106/RPReplay_Final1659030788.mp4"></video>
+        </app>
+        <nav>
+            <a href="products.html" class="navElem">
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+                <p>Produits</p>
+            </a>
+            <a href="index.html" class="navElem">
+                <span class="material-icons">
+                    account_circle
+                </span>
+                <p>Mon profil</p>
+            </a>
+        </nav>
+
+        <script>
+            let currentPage = "getCoins";
+        </script>
+        <script type="module" async src="js/app.js"></script>
+    </body>
+</html>
